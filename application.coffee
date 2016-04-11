@@ -32,9 +32,9 @@ fs.writeFile './public/js/config.js', clientConfig, (err) ->
   console.error(err) if err
 
 #compiling clients files
-exec 'coffee --compile --output ./public/js/ ./public/coffee/', (err, stdout, stderr) ->
-  console.error err if err
-  console.error stderr if stderr
+#exec 'coffee --compile --output ./public/js/ ./public/coffee/', (err, stdout, stderr) ->
+#  console.error err if err
+#  console.error stderr if stderr
 
 server.listen process.env.PORT || app.config.httpPort
 

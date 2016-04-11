@@ -1,0 +1,1 @@
+var appConfig = {"httpPort":4000,"httpHost":"10.11.22.10"};

@@ -94,7 +94,7 @@
             url: 'http://10.11.22.10:3001/sendData',
             crossDomain: true,
             data: {
-              "score": "10",
+              "score": "1",
               "user": location.search.split('user=')[1],
               "event": "TICTAC"
             },
@@ -127,7 +127,7 @@
               console.log(responseData);
             }
           });
-          message = '<span class="bad">You lose!  Debited 1 credit from your account ;_;</span>';
+          message = '<span class="bad">You lose!  Debited 1 credit from  your account ;_;</span>';
         }
         redrawBoard(data.board);
         return updateText($info, message);

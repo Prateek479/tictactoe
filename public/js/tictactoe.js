@@ -99,7 +99,7 @@
               "event": "TICTAC"
             },
             dataType: 'json',
-            success: function(responseseData, textStatus, jqXHR) {
+            success: function(responseData, textStatus, jqXHR) {
               console.log(responseData);
             },
             error: function(responseData, textStatus, errorThrown) {

@@ -1,0 +1,82 @@
+body {
+    background: #fff;
+    color: #ffffff;
+    text-align: center;
+}
+
+a {
+    color: orange;
+    font-weight: bold;
+}
+
+#borderBR-1{
+    border-bottom: 1px solid black;
+    border-right: 1px solid black
+}
+
+.borderBR {
+    border-bottom: 1px solid black;
+    border-right: 1px solid black
+}
+.borderR {
+
+    border-right: 1px solid black
+}
+.borderB {
+    border-bottom: 1px solid black;
+
+}
+
+#status {
+    color: grey;
+    font-size: 80%;
+}
+
+.bad {
+    color: red;
+}
+
+.good {
+    color: green;
+}
+
+#info {
+    color: #D61818;
+}
+
+#team {
+    height: 25px;
+    font-size: 17px;
+    color: #070C5A;
+}
+
+#board {
+    width: 250px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+#board table {
+    border-color: #ffffff;
+    margin-top: 15px;
+}
+
+#board table td {
+    width: 80px;
+    height: 80px;
+    font-family: Consolas;
+    font-size: 40px;
+}
+
+#board table td.cross {
+    color: blue;
+}
+
+#board table td.nought {
+    color: red;
+}
+
+#board table td:hover {
+    cursor: pointer;
+    background-color: #222222;
+}

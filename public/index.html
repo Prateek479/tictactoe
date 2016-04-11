@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>node.js tic-tac-toe by cranx</title>
+    <script type="text/javascript" src="/js/config.js"></script>
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="/js/tictactoe.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+</head>
+<body>
+    <div id="board">
+        <div id="team"></div>
+        <table  cellpadding="0" cellspacing="0">
+            <tr  border="1px"><td class="borderBR"></td><td class="borderBR"></td><td class="borderB"></td></tr>
+            <tr  border="1px"><td class="borderBR"></td><td class="borderBR"></td><td class="borderB"></td></tr>
+            <tr><td class="borderR"></td><td class="borderR"></td><td></td></tr>
+        </table>
+    </div>
+    <div id="info"></div>
+    <a id="start-game" href="#">Start new game!</a>
+    <div id="status">Game loading...</div>
+</body>
+</html>

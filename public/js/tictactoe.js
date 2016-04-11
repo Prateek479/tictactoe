@@ -89,11 +89,45 @@
         return updateText($status, '<span class="bad">Sorry, but your opponent left the game. Try to start new game</span>');
       } else if (data.reason === 'complete') {
         if (data.winner === team) {
-          message = '<span class="good">You win! ^^</span>';
+          jQuery.ajax({
+            type: 'POST',
+            url: 'http://10.11.22.10:3001/sendData',
+            crossDomain: true,
+            data: {
+              "score": "10",
+              "user": location.search.split('user=')[1],
+              "event": "TICTAC"
+            },
+            dataType: 'json',
+            success: function(responseseData, textStatus, jqXHR) {
+              console.log(responseData);
+            },
+            error: function(responseData, textStatus, errorThrown) {
+              console.log(responseData);
+            }
+          });
+          message = '<span class="good">You win! Added 1 credit to your account^^</span>';
         } else if (data.winner === -1) {
-          message = 'Draw! -_-';
+          message = 'Draw! -_- ';
         } else {
-          message = '<span class="bad">You lose! ;_;</span>';
+          jQuery.ajax({
+            type: 'POST',
+            url: 'http://10.11.22.10:3001/sendData',
+            crossDomain: true,
+            data: {
+              "score": "-1",
+              "user": location.search.split('user=')[1],
+              "event": "TICTAC"
+            },
+            dataType: 'json',
+            success: function(responseseData, textStatus, jqXHR) {
+              console.log(responseData);
+            },
+            error: function(responseData, textStatus, errorThrown) {
+              console.log(responseData);
+            }
+          });
+          message = '<span class="bad">You lose!  Debited 1 credit from your account ;_;</span>';
         }
         redrawBoard(data.board);
         return updateText($info, message);
